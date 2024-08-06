@@ -32,6 +32,7 @@
 
         .hero-content {
             z-index: 2;
+            padding: 0 20px;
         }
 
         .hero h1 {
@@ -60,7 +61,7 @@
         }
 
         .section {
-            padding: 80px 0;
+            padding: 80px 20px;
         }
 
         .section h2 {
@@ -126,6 +127,7 @@
 
         .interface-demo {
             text-align: center;
+            padding: 80px 20px;
         }
 
         .interface-demo h2 {
@@ -142,23 +144,34 @@
         }
 
         footer {
-            background-color: #343a40;
+            background-color: #1a1a1a;
             color: white;
             text-align: center;
-            padding: 20px 0;
-        }
-
-        footer p {
-            margin-bottom: 10px;
+            padding: 40px 20px;
         }
 
         footer a {
             color: #ff4c60;
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         footer a:hover {
             color: #e84352;
+        }
+
+        .social-icons {
+            margin: 20px 0;
+        }
+
+        .social-icons a {
+            color: #ffffff;
+            font-size: 2rem;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ff4c60;
         }
 
         @keyframes fadeInDown {
@@ -180,6 +193,32 @@
             to {
                 opacity: 1;
                 transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.25rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .cta h2 {
+                font-size: 2rem;
+            }
+
+            .cta p {
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -256,9 +295,9 @@
                 <tbody>
                     <tr>
                         <td>Цена</td>
-                        <td>Самая низкая</td>
-                        <td>Выше</td>
-                        <td>Выше</td>
+                        <td>От 10 000 ₸</td>
+                        <td>От 20 000 ₸</td>
+                        <td>От 20 000 ₸</td>
                     </tr>
                     <tr>
                         <td>Пробный период</td>
@@ -367,13 +406,22 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 SalesBooster. Все права защищены.</p>
-            <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+            <p>Следите за нами в социальных сетях:</p>
+            <div class="social-icons">
+                <a href="https://t.me/yourtelegram" target="_blank" title="Наш Telegram"><i class="fab fa-telegram"></i></a>
+                <a href="https://instagram.com/yourinstagram" target="_blank" title="Наш Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <a href="mailto:info@salesbooster.com" class="btn btn-primary btn-lg mt-4">Обратная связь</a>
+            <p class="mt-4">© 2024 SalesBooster. Все права защищены.</p>
         </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
