@@ -6,182 +6,215 @@
     <title>SalesBooster - Аналитический сервис для продавцов на Kaspi</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             background-color: #f4f7fa;
             color: #333;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
         }
+
         .hero {
-            background: url('https://images.wallpaperscraft.ru/image/single/chernila_kraska_otrazhenie_1283343_1920x1080.jpg') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5') no-repeat center center/cover;
             height: 100vh;
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 20px;
             position: relative;
-            overflow: hidden;
         }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
+
         .hero-content {
             z-index: 2;
-            position: relative;
         }
+
         .hero h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             font-weight: bold;
             margin-bottom: 20px;
+            animation: fadeInDown 2s;
         }
+
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             margin-bottom: 30px;
+            animation: fadeInUp 2s;
         }
+
         .btn-primary {
-            background-color: #007bff;
+            background-color: #ff4c60;
             border: none;
-            transition: background-color 0.3s;
             padding: 10px 20px;
             font-size: 1.25rem;
+            transition: background-color 0.3s;
         }
+
         .btn-primary:hover {
-            background-color: #0056b3;
+            background-color: #e84352;
         }
-        .features, .cta, .testimonials, .comparison, .faq {
-            padding: 60px 0;
+
+        .section {
+            padding: 80px 0;
         }
+
+        .section h2 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .features {
+            background-color: #ffffff;
+        }
+
         .feature-item {
             text-align: center;
             margin: 20px 0;
-            transition: transform 0.3s;
         }
+
         .feature-icon {
             font-size: 60px;
-            color: #007bff;
-            margin-bottom: 15px;
-        }
-        .cta {
-            background: #007bff;
-            color: white;
-            border-radius: 15px;
-            text-align: center;
-        }
-        .cta h2 {
-            font-size: 2.5rem;
+            color: #ff4c60;
             margin-bottom: 20px;
         }
+
+        .cta {
+            background-color: #ff4c60;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 15px;
+        }
+
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
         .testimonials {
             background-color: #f8f9fa;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
         .testimonials h2 {
-            font-size: 2.5rem;
             margin-bottom: 40px;
         }
+
         .testimonial-item {
             margin-bottom: 30px;
-            text-align: center;
         }
+
         .comparison {
             background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
         }
+
         .comparison h2 {
-            font-size: 2.5rem;
             margin-bottom: 40px;
         }
+
         .table th, .table td {
             vertical-align: middle;
             text-align: center;
         }
+
         .interface-demo {
             text-align: center;
-            padding: 60px 0;
         }
+
         .interface-demo h2 {
-            font-size: 2.5rem;
             margin-bottom: 40px;
         }
+
         .faq {
             background-color: #f8f9fa;
-            border-radius: 15px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
+
         .faq h2 {
-            font-size: 2.5rem;
             margin-bottom: 40px;
         }
+
         footer {
             background-color: #343a40;
             color: white;
-            padding: 20px 0;
             text-align: center;
+            padding: 20px 0;
         }
+
         footer p {
             margin-bottom: 10px;
         }
+
         footer a {
-            color: #00b8d4;
+            color: #ff4c60;
             text-decoration: underline;
         }
+
         footer a:hover {
-            color: #007bff;
+            color: #e84352;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-
     <header class="hero">
         <div class="hero-content">
-          <h1>SalesBooster</h1>
-          <p>Автокоррекция цен на ваши товары для достижения лучших позиций в карточке товара на Kaspi</p>
+            <h1 class="animate__animated animate__fadeInDown">SalesBooster</h1>
+            <p class="animate__animated animate__fadeInUp">Автокоррекция цен на ваши товары для достижения лучших позиций в карточке товара на Kaspi</p>
             <a href="#features" class="btn btn-primary btn-lg">Узнать больше</a>
         </div>
     </header>
 
-    <div class="container features" id="features">
-        <h2 class="text-center mb-5">Преимущества SalesBooster</h2>
+    <div class="container section features" id="features">
+        <h2>Преимущества SalesBooster</h2>
         <div class="row text-center">
             <div class="col-md-4 feature-item">
                 <i class="fas fa-cogs feature-icon"></i>
                 <h3>Автоматизация</h3>
-                <p>Наш сервис автоматически корректирует цены на ваши товары, чтобы вы всегда были в топе</p>
+                <p>Наш сервис автоматически корректирует цены на ваши товары, чтобы вы всегда были в топе.</p>
             </div>
             <div class="col-md-4 feature-item">
                 <i class="fas fa-chart-line feature-icon"></i>
                 <h3>Аналитика</h3>
-                <p>Получайте подробные отчеты об экономических показателях вашего бизнеса и принимайте взвешенные решения</p>
+                <p>Получайте подробные отчеты об экономических показателях вашего бизнеса и принимайте взвешенные решения.</p>
             </div>
             <div class="col-md-4 feature-item">
                 <i class="fas fa-user-friends feature-icon"></i>
                 <h3>Удобство</h3>
-                <p>Простой и интуитивно понятный интерфейс, который позволяет легко управлять вашими товарами</p>
+                <p>Простой и интуитивно понятный интерфейс, который позволяет легко управлять вашими товарами.</p>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="container section">
         <h2 class="text-center mb-5">Как это работает?</h2>
         <div class="row">
             <div class="col-md-6">
@@ -208,8 +241,8 @@
         </div>
     </div>
 
-    <div class="container comparison">
-        <h2 class="text-center mb-5">Сравнение с конкурентами</h2>
+    <div class="container section comparison">
+        <h2>Сравнение с конкурентами</h2>
         <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
@@ -244,15 +277,18 @@
         </div>
     </div>
 
-    <div class="container interface-demo">
-        <h2 class="text-center mb-5">Демонстрация интерфейса</h2>
+    <div class="container section interface-demo">
+        <h2>Демонстрация интерфейса</h2>
         <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=WkanWhuOg1E" allowfullscreen></iframe>
+
+          
+
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
         </div>
     </div>
 
-    <div class="container testimonials">
-        <h2 class="text-center mb-5">Отзывы клиентов</h2>
+    <div class="container section testimonials">
+        <h2>Отзывы клиентов</h2>
         <div class="row">
             <div class="col-md-4 testimonial-item">
                 <blockquote class="blockquote">
@@ -275,14 +311,14 @@
         </div>
     </div>
 
-    <div class="container cta">
+    <div class="container section cta">
         <h2>Готовы начать?</h2>
         <p>Попробуйте SalesBooster бесплатно в течение 30 дней и убедитесь в его эффективности.</p>
-        <a href="#" class="btn btn-primary btn-lg">Начать</a>
+        <a href="#" class="btn btn-light btn-lg">Начать</a>
     </div>
 
-    <div class="container faq">
-        <h2 class="text-center mb-5">Часто задаваемые вопросы</h2>
+    <div class="container section faq">
+        <h2>Часто задаваемые вопросы</h2>
         <div class="accordion" id="faqAccordion">
             <div class="card">
                 <div class="card-header" id="faqHeading1">
