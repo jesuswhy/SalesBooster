@@ -15,6 +15,8 @@
             background-color: #f4f7fa;
             color: #333;
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
         }
         .hero {
             background: url('https://images.wallpaperscraft.ru/image/single/chernila_kraska_otrazhenie_1283343_1920x1080.jpg') no-repeat center center/cover;
@@ -37,40 +39,42 @@
             bottom: 0;
             background: rgba(0, 0, 0, 0.5);
             z-index: 1;
-            display: none;
+        }
+        .hero-content {
+            z-index: 2;
+            position: relative;
         }
         .hero h1 {
-            font-size: 3rem; /* Уменьшенный размер для мобильных */
+            font-size: 3rem;
             font-weight: bold;
             margin-bottom: 20px;
-            z-index: 2;
         }
         .hero p {
-            font-size: 1.25rem; /* Уменьшенный размер для мобильных */
+            font-size: 1.25rem;
             margin-bottom: 30px;
-            z-index: 2;
         }
         .btn-primary {
             background-color: #007bff;
             border: none;
             transition: background-color 0.3s;
-            padding: 10px 20px; /* Увеличенный отступ для кнопок */
+            padding: 10px 20px;
+            font-size: 1.25rem;
         }
         .btn-primary:hover {
             background-color: #0056b3;
         }
-        .features, .cta, .testimonials, .comparison {
-            padding: 40px 0; /* Уменьшенный отступ для мобильных */
+        .features, .cta, .testimonials, .comparison, .faq {
+            padding: 60px 0;
         }
         .feature-item {
             text-align: center;
-            margin: 20px 0; /* Уменьшенный отступ для мобильных */
+            margin: 20px 0;
             transition: transform 0.3s;
         }
         .feature-icon {
-            font-size: 60px; /* Уменьшенный размер для мобильных */
+            font-size: 60px;
             color: #007bff;
-            margin-bottom: 15px; /* Уменьшенный отступ для мобильных */
+            margin-bottom: 15px;
         }
         .cta {
             background: #007bff;
@@ -79,16 +83,17 @@
             text-align: center;
         }
         .cta h2 {
-            font-size: 2rem; /* Уменьшенный размер для мобильных */
+            font-size: 2.5rem;
             margin-bottom: 20px;
         }
         .testimonials {
             background-color: #f8f9fa;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         .testimonials h2 {
-            font-size: 2rem; /* Уменьшенный размер для мобильных */
+            font-size: 2.5rem;
             margin-bottom: 40px;
         }
         .testimonial-item {
@@ -99,19 +104,38 @@
             background-color: #ffffff;
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         .comparison h2 {
-            font-size: 2rem; /* Уменьшенный размер для мобильных */
+            font-size: 2.5rem;
             margin-bottom: 40px;
         }
         .table th, .table td {
             vertical-align: middle;
-            text-align: center; /* Центрирование текста в таблице */
+            text-align: center;
+        }
+        .interface-demo {
+            text-align: center;
+            padding: 60px 0;
+        }
+        .interface-demo h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+        .faq {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .faq h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
         }
         footer {
             background-color: #343a40;
             color: white;
-            padding: 20px 0; /* Уменьшенный отступ для мобильных */
+            padding: 20px 0;
             text-align: center;
         }
         footer p {
@@ -129,30 +153,30 @@
 <body>
 
     <header class="hero">
-        <div>
+        <div class="hero-content">
           <h1>SalesBooster</h1>
-          <p>Автокоррекция цен на ваши товары для достижения лучших позиций в карточке товара на Kaspi.</p>
+          <p>Автокоррекция цен на ваши товары для достижения лучших позиций в карточке товара на Kaspi</p>
             <a href="#features" class="btn btn-primary btn-lg">Узнать больше</a>
         </div>
     </header>
 
-    <div class="container features">
+    <div class="container features" id="features">
         <h2 class="text-center mb-5">Преимущества SalesBooster</h2>
         <div class="row text-center">
             <div class="col-md-4 feature-item">
                 <i class="fas fa-cogs feature-icon"></i>
                 <h3>Автоматизация</h3>
-                <p>Наш сервис автоматически корректирует цены на ваши товары, чтобы вы всегда были в топе.</p>
+                <p>Наш сервис автоматически корректирует цены на ваши товары, чтобы вы всегда были в топе</p>
             </div>
             <div class="col-md-4 feature-item">
                 <i class="fas fa-chart-line feature-icon"></i>
                 <h3>Аналитика</h3>
-                <p>Получайте подробные отчеты об экономических показателях вашего бизнеса и принимайте взвешенные решения.</p>
+                <p>Получайте подробные отчеты об экономических показателях вашего бизнеса и принимайте взвешенные решения</p>
             </div>
             <div class="col-md-4 feature-item">
                 <i class="fas fa-user-friends feature-icon"></i>
                 <h3>Удобство</h3>
-                <p>Простой и интуитивно понятный интерфейс, который позволяет легко управлять вашими товарами.</p>
+                <p>Простой и интуитивно понятный интерфейс, который позволяет легко управлять вашими товарами</p>
             </div>
         </div>
     </div>
@@ -179,9 +203,12 @@
                 <p>Анализируйте результаты работы сервиса и корректируйте стратегию, основываясь на полученных данных.</p>
             </div>
         </div>
+        <div class="text-center">
+            <a href="#" class="btn btn-primary btn-lg mt-4">Начать</a>
+        </div>
     </div>
 
-    <div class="container">
+    <div class="container comparison">
         <h2 class="text-center mb-5">Сравнение с конкурентами</h2>
         <div class="table-responsive">
             <table class="table table-bordered">
@@ -202,82 +229,100 @@
                     </tr>
                     <tr>
                         <td>Пробный период</td>
-                        <td>30 дней бесплатно</td>
+                        <td>30 дней</td>
+                        <td>7 дней</td>
                         <td>14 дней</td>
-                        <td>Нет</td>
                     </tr>
                     <tr>
-                        <td>Автоматическая коррекция цен</td>
-                        <td>Да</td>
-                        <td>Да</td>
-                        <td>Нет</td>
-                    </tr>
-                    <tr>
-                        <td>Аналитика</td>
-                        <td>Подробная</td>
+                        <td>Функциональность</td>
+                        <td>Максимальная</td>
                         <td>Ограниченная</td>
-                        <td>Базовая</td>
+                        <td>Средняя</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <div class="cta">
-        <h2>Начните использовать SalesBooster уже сегодня!</h2>
-        <p>Увеличьте свои продажи и оставайтесь конкурентоспособными на Kaspi.</p>
-        <a href="mailto:info@salesbooster.com" class="btn btn-light btn-lg">Связаться с нами</a>
+    <div class="container interface-demo">
+        <h2 class="text-center mb-5">Демонстрация интерфейса</h2>
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=WkanWhuOg1E" allowfullscreen></iframe>
+        </div>
     </div>
 
     <div class="container testimonials">
-        <h2>Отзывы наших клиентов</h2>
-        <p><strong>Алексей И.</strong>: "SalesBooster помог мне увеличить продажи на 30% всего за месяц!"</p>
-        <p><strong>Мария П.</strong>: "Интерфейс очень удобный, а аналитика - на высшем уровне!"</p>
-        <p><strong>Дмитрий С.</strong>: "Теперь я всегда в курсе цен конкурентов благодаря SalesBooster!"</p>
+        <h2 class="text-center mb-5">Отзывы клиентов</h2>
+        <div class="row">
+            <div class="col-md-4 testimonial-item">
+                <blockquote class="blockquote">
+                    <p class="mb-0">SalesBooster помог увеличить продажи на 20% всего за месяц!</p>
+                    <footer class="blockquote-footer">Иван Иванов</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4 testimonial-item">
+                <blockquote class="blockquote">
+                    <p class="mb-0">Простой и удобный интерфейс. Никаких сложностей в использовании.</p>
+                    <footer class="blockquote-footer">Мария Петрова</footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4 testimonial-item">
+                <blockquote class="blockquote">
+                    <p class="mb-0">Лучший сервис для управления ценами на Kaspi!</p>
+                    <footer class="blockquote-footer">Алексей Смирнов</footer>
+                </blockquote>
+            </div>
+        </div>
     </div>
 
-    <div class="container">
+    <div class="container cta">
+        <h2>Готовы начать?</h2>
+        <p>Попробуйте SalesBooster бесплатно в течение 30 дней и убедитесь в его эффективности.</p>
+        <a href="#" class="btn btn-primary btn-lg">Начать</a>
+    </div>
+
+    <div class="container faq">
         <h2 class="text-center mb-5">Часто задаваемые вопросы</h2>
         <div class="accordion" id="faqAccordion">
             <div class="card">
-                <div class="card-header" id="faqHeadingOne">
+                <div class="card-header" id="faqHeading1">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqOne" aria-expanded="true" aria-controls="faqOne">
-                            Как работает автоматическая коррекция цен?
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                            Как подключить аккаунт Kaspi к SalesBooster?
                         </button>
                     </h5>
                 </div>
-                <div id="faqOne" class="collapse show" aria-labelledby="faqHeadingOne" data-parent="#faqAccordion">
+                <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
                     <div class="card-body">
-                        Система анализирует цены конкурентов и автоматически корректирует ваши цены, чтобы обеспечить максимальную конкурентоспособность.
+                        Просто следуйте пошаговым инструкциям в нашем интерфейсе. Процесс займет не более 5 минут.
                     </div>
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" id="faqHeadingTwo">
+                <div class="card-header" id="faqHeading2">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
-                            Как я могу отменить подписку?
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            Какова стоимость подписки на SalesBooster?
                         </button>
                     </h5>
                 </div>
-                <div id="faqTwo" class="collapse" aria-labelledby="faqHeadingTwo" data-parent="#faqAccordion">
+                <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
                     <div class="card-body">
-                        Вы можете отменить подписку в любой момент через настройки вашего аккаунта на нашем сайте.
+                        Стоимость подписки зависит от выбранного тарифа. Подробности можно узнать на странице тарифов.
                     </div>
                 </div>
             </div>
             <div class="card">
-                <div class="card-header" id="faqHeadingThree">
+                <div class="card-header" id="faqHeading3">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
-                            Есть ли бесплатный пробный период?
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                            Есть ли пробный период?
                         </button>
                     </h5>
                 </div>
-                <div id="faqThree" class="collapse" aria-labelledby="faqHeadingThree" data-parent="#faqAccordion">
+                <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
                     <div class="card-body">
-                        Да, мы предлагаем бесплатный пробный период на 30 дней, чтобы вы могли оценить все преимущества нашего сервиса.
+                        Да, вы можете воспользоваться пробным периодом в 30 дней, чтобы оценить все возможности сервиса.
                     </div>
                 </div>
             </div>
@@ -285,8 +330,10 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 SalesBooster - Аналитический сервис для продавцов на Kaspi</p>
-        <p><a href="mailto:info@salesbooster.com">Связаться с нами</a></p>
+        <div class="container">
+            <p>&copy; 2024 SalesBooster. Все права защищены.</p>
+            <p><a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
