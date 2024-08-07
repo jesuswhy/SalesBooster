@@ -143,18 +143,58 @@
         .comparison h2 {
             margin-bottom: 40px;
         }
+     
+.highlight-cell {
+    background-color: #e9ecef;
+    font-weight: bold;
+    color: #333;
+}
 
-        .table th,
-        .table td {
-            vertical-align: middle;
-            text-align: center;
-        }
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
 
-        .table tbody tr:first-child td:nth-child(2) {
-            background-color: #ff4c60;
-            color: white;
-            font-weight: bold;
-        }
+.table thead th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.highlight-header {
+    background-color: #007bff;
+    color: #ff4c60;
+}
+
+.table tbody td {
+    text-align: center;
+    padding: 12px;
+    border-bottom: 1px solid #dee6e3;
+}
+
+.highlight-cell {
+    background-color: #e9ecef;
+    font-weight: bold;
+    color: #ff4c60;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
 
         .interface-demo {
             text-align: center;
@@ -569,7 +609,7 @@
                 <thead>
                     <tr>
                         <th>Параметр</th>
-                        <th>SalesBooster</td>
+                        <th class="highlight-header">SalesBooster</th>
                         <th>Конкурент 1</th>
                         <th>Конкурент 2</th>
                     </tr>
@@ -577,31 +617,31 @@
                 <tbody>
                     <tr>
                         <td>Цена</td>
-                        <td>10 000 ₸</td>
+                        <td class="highlight-cell">10 000 ₸</td>
                         <td>От 20 000 ₸</td>
                         <td>От 20 000 ₸</td>
                     </tr>
                     <tr>
                         <td>Пробный период</td>
-                        <td>30 дней</td>
+                        <td class="highlight-cell">30 дней</td>
                         <td>Нет</td>
                         <td>3 дня</td>
                     </tr>
                     <tr>
                         <td>Частота обновления</td>
-                        <td>Раз в 2 минуты</td>
+                        <td class="highlight-cell">Раз в 2 минуты</td>
                         <td>Раз в 5 минут</td>
                         <td>Раз в 5-10 минут</td>
                     </tr>
                     <tr>
                         <td>Максимум товаров</td>
-                        <td>Неограниченно</td>
+                        <td class="highlight-cell">Неограниченно</td>
                         <td>До 2 000 товаров</td>
                         <td>До 1 000 товаров</td>
                     </tr>
                     <tr>
                         <td>Функциональность</td>
-                        <td>Максимальная</td>
+                        <td class="highlight-cell">Максимальная</td>
                         <td>Ограниченная</td>
                         <td>Ограниченная</td>
                     </tr>
@@ -609,6 +649,7 @@
             </table>
         </div>
     </div>
+    
 
 
     
