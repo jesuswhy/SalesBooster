@@ -348,6 +348,57 @@
         .back-to-top:hover {
             background-color: #e84352;
         }
+        .pricing {
+            background-color: #ffffff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .pricing h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+        }
+        .pricing .card {
+            border: none;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+        .pricing .card:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .pricing .card-header {
+            background-color: #ff4c60;
+            color: #fff;
+            border-radius: 15px 15px 0 0;
+            padding: 30px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .pricing .card-body {
+            padding: 30px;
+        }
+        .pricing .card-body h5 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .pricing .card-body ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .pricing .card-body ul li {
+            margin: 10px 0;
+        }
+        .pricing .btn {
+            background-color: #ff4c60;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.25rem;
+            transition: background-color 0.3s;
+        }
+        .pricing .btn:hover {
+            background-color: #e84352;
+        }
     </style>
 </head>
 <body>
@@ -404,12 +455,62 @@
         </div>
     </div>
 
+
+    
     <div class="container section interface-demo">
         <h2>Демонстрация интерфейса</h2>
         <div class="embed-responsive embed-responsive-16by9">
 
 
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="container section pricing" id="pricing">
+        <h2>Тарифные планы</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Базовый</div>
+                    <div class="card-body">
+                        <h5>5 000 ₸/мес</h5>
+                        <ul>
+                            <li>Автоматизация цен</li>
+                            <li>Основная аналитика</li>
+                            <li>Поддержка 24/7</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Стандарт</div>
+                    <div class="card-body">
+                        <h5>10 000 ₸/мес</h5>
+                        <ul>
+                            <li>Автоматизация цен</li>
+                            <li>Продвинутая аналитика</li>
+                            <li>Поддержка 24/7</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Премиум</div>
+                    <div class="card-body">
+                        <h5>20 000 ₸/мес</h5>
+                        <ul>
+                            <li>Автоматизация цен</li>
+                            <li>Полная аналитика</li>
+                            <li>Персональный менеджер</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Выбрать</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -461,6 +562,8 @@
         </div>
     </div>
 
+
+    
     <div class="container section testimonials" id="testimonials">
         <h2>Отзывы наших клиентов</h2>
         <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
