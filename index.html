@@ -87,16 +87,39 @@
         }
 
         .cta {
-            background-color: #ff4c60;
-            color: white;
-            text-align: center;
+            background: linear-gradient(135deg, #ff4c60, #ff6b81);
+            color: #fff;
             padding: 60px 20px;
-            border-radius: 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin: 20px 0;
         }
 
         .cta h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
+            font-weight: bold;
             margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta .btn-primary {
+            background-color: #fff;
+            color: #ff4c60;
+            border-color: #fff;
+            font-size: 1.1rem;
+            padding: 15px 30px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .cta .btn-primary:hover {
+            background-color: #ff6b81;
+            color: #fff;
         }
 
         .testimonials {
@@ -113,7 +136,7 @@
         }
 
         .comparison {
-            background-color: #ffffff;
+            background-color: #f4f7fa;
         }
 
         .comparison h2 {
@@ -388,6 +411,18 @@
         .pricing .card-body ul li {
             margin: 10px 0;
         }
+        .missing-feature {
+            text-decoration: line-through;
+            color: #999;
+        }
+        .highlighted-missing {
+            background-color: #ffffff;
+        }
+
+        .highlighted-feature {
+            background-color: #adffb6;
+        }
+
         .pricing .btn {
             background-color: #ff4c60;
             color: #fff;
@@ -398,6 +433,11 @@
         }
         .pricing .btn:hover {
             background-color: #e84352;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -471,27 +511,16 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header">Базовый</div>
-                    <div class="card-body">
-                        <h5>5 000 ₸/мес</h5>
-                        <ul>
-                            <li>Автоматизация цен</li>
-                            <li>Основная аналитика</li>
-                            <li>Поддержка 24/7</li>
-                        </ul>
-                        <a href="#" class="btn btn-primary">Выбрать</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">Стандарт</div>
+                    <div class="card-header">Seller</div>
                     <div class="card-body">
                         <h5>10 000 ₸/мес</h5>
                         <ul>
                             <li>Автоматизация цен</li>
-                            <li>Продвинутая аналитика</li>
-                            <li>Поддержка 24/7</li>
+                            <li>Базовая аналитика</li>
+                            <li class="highlighted-feature">Добавление 1-го магазина</li>
+                            <li class="highlighted-missing missing-feature">Продвинутая аналитика</li>
+                            <li class="highlighted-missing missing-feature">Поддержка 24/7</li>
+                            <li class="highlighted-missing missing-feature">Персональный менеджер</li>
                         </ul>
                         <a href="#" class="btn btn-primary">Выбрать</a>
                     </div>
@@ -499,13 +528,31 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header">Премиум</div>
+                    <div class="card-header">Seller Pro</div>
                     <div class="card-body">
                         <h5>20 000 ₸/мес</h5>
                         <ul>
                             <li>Автоматизация цен</li>
+                            <li>Продвинутая аналитика</li>
+                            <li>Поддержка 24/7</li>
+                            <li class="highlighted-feature">Добавление 1-го магазина</li>
+                            <li class="highlighted-missing missing-feature">Полная аналитика</li>
+                            <li class="highlighted-missing missing-feature">Персональный менеджер</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Seller Ultimate</div>
+                    <div class="card-body">
+                        <h5>50 000 ₸/мес</h5>
+                        <ul>
+                            <li>Автоматизация цен</li>
                             <li>Полная аналитика</li>
                             <li>Персональный менеджер</li>
+                            <li class="highlighted-feature">Добавление 3-х магазинов</li>
                         </ul>
                         <a href="#" class="btn btn-primary">Выбрать</a>
                     </div>
@@ -554,7 +601,7 @@
                     <tr>
                         <td>Функциональность</td>
                         <td>Максимальная</td>
-                        <td>Широкая</td>
+                        <td>Ограниченная</td>
                         <td>Ограниченная</td>
                     </tr>
                 </tbody>
@@ -581,10 +628,37 @@
                         </div>
                     </div>
                 </div>
+                
                 <div class="carousel-item">
                     <div class="testimonial-item">
                         <p class="testimonial-text">Очень удобный сервис, автоматизация на высшем уровне!</p>
                         <p class="testimonial-author">— Анна Смирнова</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">Очень удобный сервис, автоматизация на высшем уровне!</p>
+                        <p class="testimonial-author">— Абдулла Садаев</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial-item">
+                        <p class="testimonial-text">Очень удобный сервис, автоматизация на высшем уровне!</p>
+                        <p class="testimonial-author">— Тимур Сергеев</p>
                         <div class="rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
