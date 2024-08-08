@@ -123,18 +123,37 @@
             color: #fff;
         }
 
-        .testimonials {
-            background-color: #f8f9fa;
-            text-align: center;
-        }
-
-        .testimonials h2 {
-            margin-bottom: 40px;
-        }
-
         .testimonial-item {
-            margin-bottom: 30px;
-        }
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 3px solid #ff4c60;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: #ff4c60;
+    margin-bottom: 10px;
+}
 
         .comparison {
             background-color: #f4f7fa;
@@ -293,6 +312,24 @@
             .cta p {
                 font-size: 1.25rem;
             }
+            .testimonial-item {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    .testimonial-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+
+    .testimonial-author {
+        font-size: 0.9rem;
+    }
+}
         }
 
         .process-step {
@@ -319,7 +356,10 @@
             width: 100%;
             overflow: hidden;
         }
-
+        .rating i {
+    color: #ff4c60;
+    margin-right: 5px;
+}
         .carousel-item {
             display: none;
             position: relative;
@@ -347,12 +387,10 @@
         }
 
         .carousel-control-prev-icon,
-        .carousel-control-next-icon {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+}
 
         /* New CSS for enhancements */
         .navbar {
@@ -659,6 +697,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="testimonial-item">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4128/4128176.png" alt="Иван Иванов" class="testimonial-avatar">
                         <p class="testimonial-text">SalesBooster значительно улучшил мои продажи на Kaspi! Рекомендую всем!</p>
                         <p class="testimonial-author">— Иван Иванов</p>
                         <div class="rating">
@@ -670,9 +709,9 @@
                         </div>
                     </div>
                 </div>
-                
                 <div class="carousel-item">
                     <div class="testimonial-item">
+                        <img src="https://cdn-icons-png.flaticon.com/128/6997/6997557.png" alt="Анна Смирнова" class="testimonial-avatar">
                         <p class="testimonial-text">Очень удобный сервис, автоматизация на высшем уровне!</p>
                         <p class="testimonial-author">— Анна Смирнова</p>
                         <div class="rating">
@@ -686,7 +725,8 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial-item">
-                        <p class="testimonial-text">Очень удобный сервис, автоматизация на высшем уровне!</p>
+                        <img src="https://cdn-icons-png.flaticon.com/128/236/236831.png" alt="Абдулла Садаев" class="testimonial-avatar">
+                        <p class="testimonial-text">SalesBooster помог мне значительно увеличить мои продажи на Kaspi. Рекомендую всем!</p>
                         <p class="testimonial-author">— Абдулла Садаев</p>
                         <div class="rating">
                             <i class="fas fa-star"></i>
@@ -699,6 +739,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="testimonial-item">
+                        <img src="https://cdn-icons-png.flaticon.com/128/6998/6998058.png" alt="Тимур Сергеев" class="testimonial-avatar">
                         <p class="testimonial-text">Очень удобный сервис, автоматизация на высшем уровне!</p>
                         <p class="testimonial-author">— Тимур Сергеев</p>
                         <div class="rating">
