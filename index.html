@@ -196,8 +196,10 @@
         }
 
         .comparison h2 {
-            margin-bottom: 40px;
-        }
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
      
 .highlight-cell {
     background-color: #e9ecef;
@@ -206,21 +208,25 @@
 }
 
 .table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    background-color: #ffffff;
 }
 
 .table thead th {
-    background-color: #f8f9fa;
-    font-weight: bold;
+    background-color: #ff4c60;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
     text-align: center;
-    padding: 15px;
-    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody td {
+    font-size: 1rem;
+    vertical-align: middle;
 }
 
 .highlight-header {
-    background-color: #007bff;
+    background-color: #ff4c60;
     color: #ff4c60;
 }
 
@@ -231,25 +237,29 @@
 }
 
 .highlight-cell {
-    background-color: #e9ecef;
+    background-color: #ffefc1;
     font-weight: bold;
-    color: #ff4c60;
+    color: #343a40;
 }
 
-.table tbody tr:hover {
-    background-color: #f1f1f1;
-}
 
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f9f9f9;
-}
-.table-bordered {
-    border: 1px solid #dee2e6;
-}
+
+
 .table-bordered th,
 .table-bordered td {
     border: 1px solid #dee2e6;
 }
+
+.highlight-header {
+    background-color: #ff4c60;
+    color: #ffffff;
+}
+
+i {
+    margin-right: 10px;
+    color: #ff4c60;
+}
+
 .interface-demo {
             text-align: center;
             padding: 80px 20px;
@@ -387,24 +397,42 @@
 }
         
 
-        .process-step {
-            text-align: center;
-            padding: 20px;
-        }
+.process-step {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        .process-step h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-        .process-step p {
-            font-size: 1rem;
-        }
+.process-icon {
+    font-size: 3rem;
+    color: #ff4c60;
+    margin-bottom: 15px;
+}
 
-        .process-arrow {
-            font-size: 2rem;
-            color: #ff4c60;
-        }
+.process-arrow {
+    font-size: 2rem;
+    color: #ff4c60;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.how-it-works p {
+    font-size: 1rem;
+    color: #666;
+}
 
         .carousel-inner {
             position: relative;
@@ -606,8 +634,9 @@
 
     <div class="container section how-it-works" id="how-it-works">
         <h2>Как это работает?</h2>
-        <div class="row">
+        <div class="row align-items-center justify-content-center">
             <div class="col-md-3 process-step">
+                <i class="fas fa-plug process-icon"></i>
                 <h3>Подключение</h3>
                 <p>Подключите ваш аккаунт Kaspi к SalesBooster за считанные минуты. Никаких сложных настроек — просто следуйте инструкциям на экране.</p>
             </div>
@@ -615,6 +644,7 @@
                 <i class="fas fa-arrow-right process-arrow"></i>
             </div>
             <div class="col-md-3 process-step">
+                <i class="fas fa-sliders-h process-icon"></i>
                 <h3>Настройка параметров</h3>
                 <p>Настройте параметры автокоррекции цен, выберите желаемые позиции и установите целевые цены.</p>
             </div>
@@ -622,11 +652,13 @@
                 <i class="fas fa-arrow-right process-arrow"></i>
             </div>
             <div class="col-md-3 process-step">
+                <i class="fas fa-eye process-icon"></i>
                 <h3>Мониторинг</h3>
                 <p>Следите за изменениями в реальном времени с помощью удобной панели управления и получайте уведомления о важных событиях.</p>
             </div>
         </div>
     </div>
+    
 
 
     
@@ -700,53 +732,50 @@
         </div>
     </div>
 
-    <div class="container section comparison" id="comparison">
-        <h2>Сравнение с конкурентами</h2>
-        <div class="table-responsive">
-            <table class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>Параметр</th>
-                        <th>SalesBooster</th>
-                        <th>Конкурент 1</th>
-                        <th>Конкурент 2</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Цена</td>
-                        <td class="highlight-cell">10 000 ₸</td>
-                        <td>От 20 000 ₸</td>
-                        <td>От 20 000 ₸</td>
-                    </tr>
-                    <tr>
-                        <td>Пробный период</td>
-                        <td class="highlight-cell">30 дней</td>
-                        <td>Нет</td>
-                        <td>3 дня</td>
-                    </tr>
-                    <tr>
-                        <td>Частота обновления</td>
-                        <td class="highlight-cell">Раз в 2 минуты</td>
-                        <td>Раз в 5 минут</td>
-                        <td>Раз в 5-10 минут</td>
-                    </tr>
-                    <tr>
-                        <td>Максимум товаров</td>
-                        <td class="highlight-cell">Неограниченно</td>
-                        <td>До 2 000 товаров</td>
-                        <td>До 1 000 товаров</td>
-                    </tr>
-                    <tr>
-                        <td>Функциональность</td>
-                        <td class="highlight-cell">Максимальная</td>
-                        <td>Ограниченная</td>
-                        <td>Ограниченная</td>
-                    </tr>
-                </tbody>
-            </table>
+    <section class="section comparison">
+        <div class="container">
+            <h2>Сравнение с конкурентами</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Функция</th>
+                            <th class="highlight-header">SalesBooster</th>
+                            <th>Конкурент 1</th>
+                            <th>Конкурент 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-cogs"></i> Автоматизация цен</td>
+                            <td class="highlight-cell">Да</td>
+                            <td>Нет</td>
+                            <td>Да</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-chart-line"></i> Продвинутая аналитика</td>
+                            <td class="highlight-cell">Да</td>
+                            <td>Нет</td>
+                            <td>Нет</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-user-shield"></i> Поддержка 24/7</td>
+                            <td class="highlight-cell">Да</td>
+                            <td>Нет</td>
+                            <td>Да</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-lock"></i> Безопасность данных</td>
+                            <td class="highlight-cell">Да</td>
+                            <td>Да</td>
+                            <td>Нет</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
+    </section>
+    
     
 
 
