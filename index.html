@@ -30,6 +30,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            
         }
 
         .hero::before {
@@ -537,24 +538,31 @@
             margin-bottom: 40px;
         }
         .pricing .card {
-            border: none;
-            border-radius: 15px;
-            transition: all 0.3s;
-        }
-        .pricing .card:hover {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        }
-        .pricing .card-header {
-            background-color: #ff4c60;
-            color: #fff;
-            border-radius: 15px 15px 0 0;
-            padding: 30px;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .pricing .card-body {
-            padding: 30px;
-        }
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавьте тень */
+}
+
+.pricing .card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Усиление тени при наведении */
+    transform: translateY(-10px); /* Легкий подъем карточки */
+}
+
+.pricing .card-header {
+    background-color: #343a40; /* Сделайте цвет более контрастным */
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.pricing .card-body h5 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff4c60; /* Используйте цвет акцента */
+}
         .pricing .card-body h5 {
             font-size: 2rem;
             margin-bottom: 20px;
@@ -595,6 +603,23 @@
             max-width: 1200px;
             margin: 0 auto;
         }
+
+        .popular .card {
+    border: 2px solid #ff4c60; /* Подчеркните рамкой */
+}
+
+.ribbon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4c60;
+    color: white;
+    padding: 5px 15px;
+    font-size: 1rem;
+    transform: rotate(30deg);
+    z-index: 10;
+}
+        
     </style>
 </head>
 <body>
@@ -663,7 +688,7 @@
             <h2>Демо-интерфейс</h2>
             <p>Посмотрите, как работает наш аналитический сервис.</p>
             <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/#" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -678,8 +703,7 @@
                         <ul>
                             <li>Бесплатный период 30 дней</li>
                             <li>Автоматизация цен</li>
-                            <li>Базовая аналитика</li>
-                            <li">Добавление 1-го магазина</li>
+                            <li>Продвинутая аналитика</li>
                             <li class="highlighted-missing missing-feature">Добавление до 3-х магазинов</li>
                             <li class="highlighted-missing missing-feature">Продвинутая аналитика</li>
                             <li class="highlighted-missing missing-feature">Поддержка 24/7</li>
@@ -690,7 +714,8 @@
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card popular">
+                    <div class="ribbon">Популярный</div>
                     <div class="card-header">Seller Pro</div>
                     <div class="card-body">
                         <h5>20 000 ₸/мес</h5>
@@ -698,8 +723,8 @@
                             <li>Бесплатный период 30 дней</li>
                             <li>Автоматизация цен</li>
                             <li">Добавление 1-го магазина</li>
-                            <li class="highlighted-feature">Продвинутая аналитика</li>
-                            <li class="highlighted-feature">Поддержка 24/7</li>
+                            <li><i class="fas fa-check-circle"></i> Продвинутая аналитика</li>
+                            <li><i class="fas fa-check-circle"></i> Поддержка 24/7</li>
                             <li class="highlighted-missing missing-feature">Добавление до 3-х магазинов</li>
                             <li class="highlighted-missing missing-feature">Полная аналитика</li>
                             <li class="highlighted-missing missing-feature">Персональный менеджер</li>
@@ -716,9 +741,9 @@
                         <ul>
                             <li>Бесплатный период 30 дней</li>
                             <li>Автоматизация цен</li>
-                            <li class="highlighted-feature">Полная аналитика</li>
-                            <li class="highlighted-feature">Персональный менеджер</li>
-                            <li class="highlighted-feature">Добавление до 3-х магазинов</li>
+                            <li><i class="fas fa-check-circle"></i> Полная аналитика</li>
+                            <li><i class="fas fa-check-circle"></i> Персональный менеджер</li>
+                            <li><i class="fas fa-check-circle"></i> Добавление до 3-х магазинов</li>
                         </ul>
                         <a href="#" class="btn btn-primary">Выбрать</a>
                     </div>
@@ -726,54 +751,6 @@
             </div>
         </div>
     </div>
-
-    <section class="section comparison">
-        <div class="container">
-            <h2>Сравнение с конкурентами</h2>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>Функция</th>
-                            <th class="highlight-header">SalesBooster</th>
-                            <th>Конкурент 1</th>
-                            <th>Конкурент 2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><i class="fas fa-cogs"></i> Автоматизация цен</td>
-                            <td class="highlight-cell">Да</td>
-                            <td>Нет</td>
-                            <td>Да</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-chart-line"></i> Продвинутая аналитика</td>
-                            <td class="highlight-cell">Да</td>
-                            <td>Нет</td>
-                            <td>Нет</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-user-shield"></i> Поддержка 24/7</td>
-                            <td class="highlight-cell">Да</td>
-                            <td>Нет</td>
-                            <td>Да</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-lock"></i> Безопасность данных</td>
-                            <td class="highlight-cell">Да</td>
-                            <td>Да</td>
-                            <td>Нет</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-    
-    
-
-
     
     <div class="container section testimonials" id="testimonials">
         <h2>Отзывы наших клиентов</h2>
