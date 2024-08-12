@@ -273,38 +273,6 @@
             margin-bottom: 40px;
         }
 
-        .faq-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-.faq-item {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item h4 {
-    margin-top: 0;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-}
-
-.faq-item h4 i {
-    margin-right: 10px;
-    color: #007bff;
-}
-
-.faq-item p {
-    margin-bottom: 0;
-    line-height: 1.6;
-}
-
-
         footer {
             background-color: #1a1a1a;
             color: white;
@@ -866,27 +834,56 @@
         </div>
     </section>
 
-    <section class="section faq">
-        <div class="container">
-            <h2>Часто задаваемые вопросы</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4><i class="fas fa-question-circle"></i> Что такое SalesBooster?</h4>
-                    <p>SalesBooster — это аналитический сервис, который помогает продавцам на Kaspi оптимизировать свои продажи с помощью автоматизации процессов и анализа данных.</p>
+    <div class="container section faq">
+
+        <h2>Часто задаваемые вопросы</h2>
+
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="faqHeading1">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                            Как подключить аккаунт Kaspi к SalesBooster?
+                        </button>
+                    </h5>
                 </div>
-                <div class="faq-item">
-                    <h4><i class="fas fa-question-circle"></i> Как подключить мой аккаунт Kaspi?</h4>
-                    <p>Подключить аккаунт можно в несколько простых шагов: войдите в систему через интерфейс SalesBooster и следуйте инструкциям на экране.</p>
-                </div>
-                <div class="faq-item">
-                    <h4><i class="fas fa-question-circle"></i> Какие данные собирает SalesBooster?</h4>
-                    <p>SalesBooster собирает данные о ваших продажах, позициях товаров и изменениях цен для предоставления наиболее точной аналитики.</p>
+                <div id="faqCollapse1" class="collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Просто следуйте пошаговым инструкциям в нашем интерфейсе. Процесс займет не более 5 минут.
+                    </div>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header" id="faqHeading2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            Какова стоимость подписки на SalesBooster?
+                        </button>
+                    </h5>
+                </div>
+                <div id="faqCollapse2" class="collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Стоимость подписки зависит от выбранного тарифа. Подробности можно узнать на странице тарифов.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="faqHeading3">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                            Есть ли пробный период?
+                        </button>
+                    </h5>
+                </div>
+                <div id="faqCollapse3" class="collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Да, вы можете воспользоваться пробным периодом в 30 дней, чтобы оценить все возможности сервиса.
+                    </div>
+                </div>
+            </div>
+            <a href="mailto:info@salesbooster.com" class="btn btn-primary btn-lg mt-4">Связаться с нами</a>
         </div>
-        <a href="mailto:info@salesbooster.com" class="btn btn-primary btn-lg mt-4">Связаться с нами</a>
-    </section>
-    
+    </div>
     <footer>
         <p>&copy; 2024 SalesBooster. Все права защищены.</p>
         <p><a href="conf.html">Политика конфиденциальности</a>  | <a href="pay.html">Политика оплаты</a>  | <a href="agreement.html">Пользовательское соглашение</a></p>
