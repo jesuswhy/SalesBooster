@@ -17,10 +17,11 @@
             color: #333;
             margin: 0;
             padding: 0;
+            overflow-x: hidden;
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5') no-repeat center center/cover;
             height: 100vh;
             color: white;
             display: flex;
@@ -30,7 +31,6 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            
         }
 
         .hero::before {
@@ -66,19 +66,19 @@
         }
 
         .btn-primary {
-        background-color: #ff4c60;
-        border: none;
-        padding: 15px 30px;
-        font-size: 1.25rem;
-        transition: background-color 0.3s, transform 0.3s;
-        border-radius: 5px;
-    }
+            background-color: #ff4c60;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.25rem;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+        }
 
-    .btn-primary:hover {
-        background-color: #e84352;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    }
+        .btn-primary:hover {
+            background-color: #e84352;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
 
         .section {
             padding: 80px 20px;
@@ -244,7 +244,24 @@
     color: #343a40;
 }
 
+.scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ff4c60;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 99;
+            transition: all 0.3s;
+        }
 
+        .scroll-top-btn:hover {
+            background-color: #e84352;
+        }
 
 .table-striped tbody tr:nth-of-type(odd) {
     background-color: #f9f9f9;
@@ -293,7 +310,7 @@
     }
 
     .accordion .card-header {
-        background-color: #6493c9;
+        background-color: #999999;
         color: #fff;
         border-radius: 10px;
         padding: 15px 20px;
@@ -302,7 +319,7 @@
     }
 
     .accordion .card-header:hover {
-        background-color: #0056b3;
+        background-color: #6493c9;
     }
 
     .accordion .btn-link {
@@ -359,10 +376,21 @@
             color: #ff4c60;
         }
 
-        @keyframes fadeInDown {
+        .fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInDown {
             from {
                 opacity: 0;
-                transform: translateY(-50px);
+                transform: translateY(-20px);
             }
 
             to {
@@ -374,7 +402,7 @@
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(20px);
             }
 
             to {
@@ -431,6 +459,15 @@
         padding: 15px;
         margin: 10px;
     }
+
+    .parallax-bg {
+            background-image: url('your-image.jpg');
+            min-height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
     .testimonial-avatar {
         width: 60px;
@@ -686,23 +723,25 @@
         </div>
     </header>
 
-    <div class="container section features" id="features">
-        <h2>Преимущества SalesBooster</h2>
-        <div class="row text-center">
-            <div class="col-md-4 feature-item">
-                <i class="fas fa-cogs feature-icon"></i>
-                <h3>Автоматизация</h3>
-                <p>Наш сервис автоматически корректирует цены на ваши товары, чтобы вы всегда были на первых позициях.</p>
-            </div>
-            <div class="col-md-4 feature-item">
-                <i class="fas fa-chart-line feature-icon"></i>
-                <h3>Аналитика</h3>
-                <p>Получайте подробные отчеты и анализ продаж для лучшего понимания вашего бизнеса.</p>
-            </div>
-            <div class="col-md-4 feature-item">
-                <i class="fas fa-user-shield feature-icon"></i>
-                <h3>Безопасность</h3>
-                <p>Ваши данные надежно защищены с помощью современных методов шифрования.</p>
+    <div id="features" class="section features">
+        <div class="container">
+            <h2>Преимущества SalesBooster</h2>
+            <div class="row">
+                <div class="col-md-4 feature-item" data-aos="fade-up">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h4>Аналитика продаж</h4>
+                    <p>Подробная информация о продажах для принятия лучших решений.</p>
+                </div>
+                <div class="col-md-4 feature-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-user-shield feature-icon"></i>
+                    <h4>Безопасность данных</h4>
+                    <p>Высокий уровень безопасности и защиты данных.</p>
+                </div>
+                <div class="col-md-4 feature-item" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-mobile-alt feature-icon"></i>
+                    <h4>Доступ с мобильных устройств</h4>
+                    <p>Поддержка всех популярных платформ и устройств.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -947,29 +986,56 @@
         </div>
     </footer>
 
-    <div class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </div>
+    <button class="scroll-top-btn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        // Back to top button
-        const backToTopButton = document.getElementById('backToTop');
-    
-        window.onscroll = function() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                backToTopButton.style.display = "block";
+        // Scroll-to-top button functionality
+        window.onscroll = function () {
+            let scrollButton = document.querySelector('.scroll-top-btn');
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollButton.style.display = "block";
             } else {
-                backToTopButton.style.display = "none";
+                scrollButton.style.display = "none";
             }
         };
-    
-        backToTopButton.onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        };
+
+            // AOS animations
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false,
+            });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        $(window).scroll(function () {
+                $('.fade-in-up').each(function () {
+                    let pos = $(this).offset().top;
+                    let winTop = $(window).scrollTop();
+                    if (pos < winTop + $(window).height()) {
+                        $(this).addClass('visible');
+                    }
+                });
+            });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          AOS.init({
+            // Настройки (опционально)
+            duration: 1000, // длительность анимации в миллисекундах
+            once: true,     // анимация запускается только один раз
+          });
+        });
+      </script>
     
 </body>
 </html>
