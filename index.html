@@ -66,18 +66,19 @@
         }
 
         .btn-primary {
-            background-color: #ff4c60;
-            border: none;
-            padding: 10px 20px;
-            font-size: 1.25rem;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+        background-color: #ff4c60;
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.25rem;
+        transition: background-color 0.3s, transform 0.3s;
+        border-radius: 5px;
+    }
 
-        .btn-primary:hover {
-            background-color: #e84352;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
+    .btn-primary:hover {
+        background-color: #e84352;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
 
         .section {
             padding: 80px 20px;
@@ -265,14 +266,68 @@
         }
 
         .faq {
-            background-color: #f8f9fa;
-            text-align: center;
-        }
+        background-color: #f8f9fa;
+        text-align: center;
+        padding: 60px 20px;
+        border-radius: 10px;
+    }
 
-        .faq h2 {
-            margin-bottom: 40px;
-        }
+    .faq h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #333;
+    }
 
+    .accordion .card {
+        background-color: #ffffff;
+        border: none;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .accordion .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .accordion .card-header {
+        background-color: #b1c3d7;
+        color: #fff;
+        border-radius: 10px;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .accordion .card-header:hover {
+        background-color: #0056b3;
+    }
+
+    .accordion .btn-link {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+    }
+
+    .accordion .btn-link i {
+        color: #ff4c60;
+    }
+
+    .accordion .btn-link:hover i {
+        color: #e84352;
+    }
+
+    .accordion .card-body {
+        padding: 20px;
+        font-size: 1rem;
+        color: #666;
+    }
         footer {
             background-color: #1a1a1a;
             color: white;
@@ -834,16 +889,14 @@
         </div>
     </section>
 
-    <div class="container section faq">
-
+    <div class="container section faq" id="faq">
         <h2>Часто задаваемые вопросы</h2>
-
         <div class="accordion" id="faqAccordion">
             <div class="card">
                 <div class="card-header" id="faqHeading1">
                     <h5 class="mb-0">
                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                            Как подключить аккаунт Kaspi к SalesBooster?
+                            <i class="fas fa-question-circle mr-2"></i>Как подключить аккаунт Kaspi к SalesBooster?
                         </button>
                     </h5>
                 </div>
@@ -857,7 +910,7 @@
                 <div class="card-header" id="faqHeading2">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                            Какова стоимость подписки на SalesBooster?
+                            <i class="fas fa-question-circle mr-2"></i>Какова стоимость подписки на SalesBooster?
                         </button>
                     </h5>
                 </div>
@@ -871,7 +924,7 @@
                 <div class="card-header" id="faqHeading3">
                     <h5 class="mb-0">
                         <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                            Есть ли пробный период?
+                            <i class="fas fa-question-circle mr-2"></i>Есть ли пробный период?
                         </button>
                     </h5>
                 </div>
@@ -884,6 +937,7 @@
             <a href="mailto:info@salesbooster.com" class="btn btn-primary btn-lg mt-4">Связаться с нами</a>
         </div>
     </div>
+    
     <footer>
         <p>&copy; 2024 SalesBooster. Все права защищены.</p>
         <p><a href="conf.html">Политика конфиденциальности</a>  | <a href="pay.html">Политика оплаты</a>  | <a href="agreement.html">Пользовательское соглашение</a></p>
