@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Современный шрифт */
+}
+
+body {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666666;
+}
+
+.hero {
+    background-image: linear-gradient(to right, #f7f9fc, #eaeaea);
+    padding: 100px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.animated-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    animation: typing 3s steps(30), blink 0.5s step-end infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    width: 20ch;
+    margin-bottom: 20px;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 20ch; }
+}
+
+@keyframes blink {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+.section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f9f9f9; /* Легкий серый фон */
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.advantages-list, .pricing-list, .testimonials-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.advantage-item, .price-item, .testimonial-item {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+    flex: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.advantage-item:hover, .testimonial-item:hover, .price-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Эффект тени при наведении */
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff7a00, #ff4d00); /* Новый градиент для кнопки */
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 14px rgba(255, 122, 0, 0.4);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #e66a00, #d44300);
+    box-shadow: 0 6px 20px rgba(255, 122, 0, 0.6);
+}
+
+.pricing-list .price-item {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+footer {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer .social-icons {
+    margin-bottom: 20px;
+}
+
+footer .social-icons a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2); /* Увеличение иконки при наведении */
+}
+
+footer .social-icons img {
+    width: 32px;
+    height: 32px;
+}
+
+/* Шапка сайта */
+.main-header {
+    background-color: #fff;
+    position: fixed;
+    padding: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Легкая тень */
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-left: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav ul li {
+    margin: 0 20px;
+}
+
+.main-nav ul li a {
+    color: #333;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav ul li a:hover {
+    color: #007bff; /* Цвет при наведении */
+}
+
+.btn-header {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    padding: 10px 25px;
+    color: #fff;
+    border-radius: 25px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-header:hover {
+    background: linear-gradient(135deg, #006bdf, #00c4ef);
+}
+
