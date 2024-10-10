@@ -30,10 +30,11 @@ p {
     color: #666666;
 }
 
+
 /* Стили для заголовка */
 .main-header {
     background-color: #ffffff;
-    padding: 5px 0; /* Уменьшаем отступы */
+    padding: 5px 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
@@ -42,24 +43,18 @@ p {
 
 .main-header .container {
     display: flex;
-    justify-content: center; /* Центрируем содержимое по горизонтали */
+    justify-content: space-between; /* Лого слева, навигация справа */
     align-items: center;
-    flex-wrap: wrap; /* Позволяет элементам перенестись на новую строку, если нужно */
 }
 
 .logo {
-    flex: 1; /* Позволяет логотипу занимать оставшееся пространство */
-    text-align: center; /* Центрируем текст логотипа */
+    text-align: left; /* Логотип выравнивается по левому краю */
 }
 
 .logo h1 {
-    font-size: 1.5rem; /* Уменьшаем размер логотипа */
+    font-size: 1.5rem;
     color: #333;
-    margin: 0; /* Убираем внешние отступы */
-}
-.main-nav {
-    flex: 1; /* Позволяет навигации занимать оставшееся пространство */
-    text-align: center; /* Центрируем текст навигации */
+    margin: 0;
 }
 
 .main-nav ul {
@@ -68,13 +63,12 @@ p {
 }
 
 .main-nav ul li {
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .main-nav ul li a {
-    font-size: 0.9rem; /* Уменьшаем размер шрифта для пунктов меню */
-    text-decoration: none;
     font-size: 1rem;
+    text-decoration: none;
     color: #333;
     transition: color 0.3s ease;
 }
@@ -83,43 +77,48 @@ p {
     color: #3EB489;
 }
 
-
 /* Герой-секция */
 .hero {
     align-content: center;
-    background-image: linear-gradient(to right, #FFA781, #FFA781);
+    background-image: linear-gradient(to right, #eff3f8, #dde9f7);
     padding: 100px 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .hero h1 {
     font-size: 3rem;
     color: #333;
+    text-align: center; /* Убеждаемся, что заголовок по центру */
+    justify-content: center;
     margin-bottom: 20px;
+    align-items: center;
 }
 
 .hero p {
     font-size: 1.4rem;
-    color: #555;
+    color: #303030;
     margin-bottom: 40px;
 }
 
 .animated-title {
     font-size: 48px;
     font-weight: bold;
-    
-    color: #333;
+    color: #131313;
     animation: typing 2s steps(30), blink 0.5s step-end infinite;
     white-space: nowrap;
     overflow: hidden;
+    text-align: center;
     border-right: 3px solid;
-    width: 12ch;
-    margin-bottom: 20px;
+    width: 11.6ch; /* Проверьте, что эта ширина соответствует длине текста */
+    margin: 0; /* Убедитесь, что отступы равны 0 */
+    padding: 0; /* Убедитесь, что поля равны 0 */
 }
+
 
 @keyframes typing {
     from { width: 0; }
@@ -130,6 +129,7 @@ p {
     from, to { border-color: transparent; }
     50% { border-color: black; }
 }
+
 
 /* Преимущества */
 .section {
@@ -160,7 +160,7 @@ p {
 }
 
 .advantage-item i {
-    color: #FFA781;
+    color: #326bdf;
     margin-bottom: 20px;
 }
 
@@ -175,19 +175,22 @@ p {
 }
 
 /* Кнопки */
-.btn-primary {
-    background: linear-gradient(135deg, #2F4F4F, #2F4F4F);
+.btn-shadow {
+    background: #469cfa;
     color: #ffffff;
     padding: 15px 30px;
-    border-radius: 30px;
+    border-radius: 8px;
     font-size: 1.2rem;
     text-decoration: none;
-    transition: background 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.btn-primary:hover {
-    background: linear-gradient(135deg, #2F4F4F, #2F4F4F);
+.btn-shadow:hover {
+    transform: translateY(-3px); /* Легкий подъем при наведении */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень при наведении */
 }
+
+
 
 /* Отзывы */
 .testimonial-item {
@@ -264,13 +267,10 @@ footer p {
 }
 
 /* Адаптивность */
+/* Адаптивность */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
-    }
-
-    .animated-title {
-        text-align: center;
     }
 
     .advantages-list {
@@ -283,22 +283,21 @@ footer p {
         width: 100%;
     }
 
-    .main-nav ul {
-        display: none; /* Изменяем это на flex */
-        flex-direction: column; /* Ставим в колонку для мобильной версии */
-        align-items: center; /* Центрируем элементы навигации */
-    
+    .main-nav {
+        display: none; /* Убираем навигацию на мобильных */
+    }
+    .logo {
+        text-align: center; /* Логотип по центру на мобильных */
+        width: 100%;
     }
 
-    .logo h1 {
-        text-align: center;
-        width: 100%; /* Логотип занимает всю ширину */
-        font-size: 1.5rem; /* Немного увеличиваем размер для лучшей видимости */
-    }
-    footer {
-        padding: 20px 0;
+    .main-nav ul {
+        display: none; /* Изменяем это на flex */
+        flex-direction: column;
+        align-items: center;
     }
 }
+
 
 
 /* Общие стили для секции FAQ */
@@ -362,7 +361,6 @@ footer p {
     border-radius: 15px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     max-width: 400px;
-    text-align: center;
 }
 
 .price-item img {
@@ -382,7 +380,7 @@ footer p {
 
 .trial-info {
     font-size: 1.2rem;
-    color: #FFA781;
+    color: #326bdf;
     margin-bottom: 30px;
 }
 
@@ -413,12 +411,11 @@ footer p {
 
 .features-list li {
     display: flex;
-    align-items: center;
     margin-bottom: 10px;
 }
 
 .features-list li i {
-    color: #FFA781;
+    color: #326bdf;
     margin-right: 10px;
     font-size: 1.5rem;
 }
