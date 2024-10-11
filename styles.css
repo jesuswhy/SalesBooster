@@ -93,7 +93,7 @@ p {
 .hero h1 {
     font-size: 3rem;
     color: #333;
-    text-align: center; /* Убеждаемся, что заголовок по центру */
+    text-align: center;
     justify-content: center;
     margin-bottom: 20px;
     align-items: center;
@@ -112,11 +112,11 @@ p {
     animation: typing 2s steps(30), blink 0.5s step-end infinite;
     white-space: nowrap;
     overflow: hidden;
-    text-align: center;
+    text-align: center; /* Центрирование текста */
     border-right: 3px solid;
-    width: 11.6ch; /* Проверьте, что эта ширина соответствует длине текста */
-    margin: 0; /* Убедитесь, что отступы равны 0 */
-    padding: 0; /* Убедитесь, что поля равны 0 */
+    width: 11.6ch; /* Ширина соответствующая длине текста */
+    margin: 0 auto; /* Центрирование самого элемента */
+    padding: 0;
 }
 
 
@@ -138,41 +138,67 @@ p {
     background-color: #f9f9f9;
 }
 
+/* Стили для секции преимуществ */
+.advantages-section {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
 .advantages-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
     margin-top: 40px;
 }
 
 .advantage-item {
-    background-color: #ffffff;
-    padding: 30px;
+    background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    flex: 1;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 .advantage-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.advantage-item i {
-    color: #326bdf;
-    margin-bottom: 20px;
+.advantage-icon {
+    font-size: 50px;
+    color: #fff;
+    background-color: #469cfa;
+    padding: 20px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
 }
 
-.advantage-item h3 {
-    font-size: 1.5rem;
+.advantage-item:hover .advantage-icon {
+    background-color: #007bff;
+}
+
+.advantage-content h3 {
+    font-size: 24px;
     margin-bottom: 10px;
+    color: #333;
 }
 
-.advantage-item p {
-    font-size: 1rem;
+.advantage-content p {
+    font-size: 16px;
     color: #666;
 }
+
+
+@media (max-width: 768px) {
+    .advantages-list {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* Кнопки */
 .btn-shadow {
@@ -190,53 +216,124 @@ p {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень при наведении */
 }
 
+/* Стили для секции "Как работает бот" */
+.how-it-works-section {
+    background-color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
 
-
-/* Отзывы */
-.testimonial-item {
-    display: none;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
     margin-top: 40px;
 }
 
-.testimonial-item.active {
-    display: block;
+.step-item {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.testimonial-item p {
-    font-size: 1rem;
+.step-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.step-icon img {
+    width: 60px;
+    height: 60px;
     margin-bottom: 20px;
 }
 
-.testimonial-item h4 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #333;
+h3 {
+    color: #000;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
 }
 
-.testimonial-controls {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.testimonial-controls button {
-    background-color: #2F4F4F;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50%;
+p {
+    color: #666;
     font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
 }
 
-.testimonial-controls button:hover {
-    background-color: #001F3F;
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+    }
+    .step-item {
+        margin-bottom: 20px;
+    }
 }
+
+
+
+/* Отзывы */
+/* Стили для секции отзывов */
+.testimonials-section {
+    background-color: #f2f2f2;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.testimonials-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.testimonial-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    min-width: 300px;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.client-avatar {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.client-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.client-position {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.testimonial-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.testimonial-rating {
+    font-size: 1.5rem;
+    color: #ffc107;
+}
+
+
 
 /* Footer */
 footer {
@@ -277,6 +374,11 @@ footer p {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+
+    .testimonials-carousel {
+        flex-direction: column;
+        align-items: center;
     }
 
     .advantage-item {
@@ -332,6 +434,7 @@ footer p {
 }
 
 .faq-answer {
+    display: none;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -345,14 +448,22 @@ footer p {
 
 /* Стили для активного вопроса */
 .faq-item.active .faq-answer {
-    max-height: 100px; /* Динамически можно увеличить в зависимости от текста */
+    display: block;
+    max-height: 500px; /* Достаточное значение для отображения содержимого */
 }
 
+
+/* Секция с ценами */
+/* Стили для секции с тарифами */
+.pricing-section {
+    background-color: #f9f9f9;
+    padding: 80px 0;
+    text-align: center;
+}
 
 .pricing-list {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
 }
 
 .price-item {
@@ -361,64 +472,81 @@ footer p {
     border-radius: 15px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
-.price-item img {
-    margin-bottom: 20px;
+.price-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
 }
 
-.price-item h3 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.price-item p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.trial-info {
-    font-size: 1.2rem;
-    color: #326bdf;
+.price-header {
+    padding: 30px 20px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    position: relative;
     margin-bottom: 30px;
 }
 
-.price-item ul {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 20px;
-}
-
-.price-item ul li {
+.price-header h3 {
+    font-size: 1.8rem;
     margin-bottom: 10px;
+}
+
+.price-header .price {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price-header .trial-period {
     font-size: 1rem;
-    color: #333;
+    font-style: italic;
 }
 
-.price-item a.btn-primary {
-    display: inline-block;
-    margin-top: 20px;
+.price-body {
+    text-align: left;
 }
 
-/* Стили для списка преимуществ тарифа */
 .features-list {
     list-style: none;
-    padding: 0;
-    margin: 20px 0;
-    font-size: 1.1rem;
+    padding-left: 0;
 }
 
 .features-list li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
     display: flex;
-    margin-bottom: 10px;
+    align-items: center;
 }
 
 .features-list li i {
-    color: #326bdf;
+    color: #3EB489;
     margin-right: 10px;
-    font-size: 1.5rem;
 }
+
+.price-footer {
+    margin-top: 20px;
+}
+
+.price-footer .btn-shadow {
+    background-color: #3EB489;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-footer .btn-shadow:hover {
+    background-color: #2a7c64;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+
 
 /* Стили для кнопок переключения */
 .testimonials-carousel {
@@ -451,4 +579,3 @@ footer p {
 .carousel-button.next {
     right: 10px; /* Расстояние от правой стороны */
 }
-
