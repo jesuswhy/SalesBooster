@@ -197,8 +197,12 @@ p {
     .advantages-list {
         grid-template-columns: 1fr;
     }
-}
 
+    
+    .main-header {
+        display: none;
+    }
+}
 
 /* Кнопки */
 .btn-shadow {
