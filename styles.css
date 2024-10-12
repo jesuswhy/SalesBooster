@@ -79,7 +79,7 @@ p {
 }
 
 .main-nav ul li a:hover {
-    color: #3571e3;
+    color: #4b8eff;
 }
 
 .features-list {
@@ -195,7 +195,7 @@ p {
 .advantage-icon {
     font-size: 25px;
     color: #fff;
-    background-color: #3571e3;
+    background-color: #4b8eff;
     padding: 20px;
     border-radius: 50%;
     margin-bottom: 15px;
@@ -231,7 +231,7 @@ p {
 
 /* Кнопки */
 .btn-shadow {
-    background-color: #3571e3;
+    background-color: #4b8eff;
     color: #fff;
     padding: 15px 30px;
     border-radius: 8px;
@@ -548,7 +548,7 @@ footer p {
 }
 
 .price-footer .btn-shadow {
-    background-color: #3571e3;
+    background-color: #4b8eff;
     color: white;
     font-size: 1.2rem;
     padding: 15px 30px;
@@ -574,7 +574,7 @@ footer p {
     position: absolute;
     top: 50%; /* Центрируем по вертикали */
     transform: translateY(-50%);
-    background-color: #3571e3; /* Цвет фона кнопки */
+    background-color: #4b8eff; /* Цвет фона кнопки */
     color: #fff; /* Цвет текста */
     border: none; /* Без рамки */
     border-radius: 50%; /* Круглая форма */
@@ -586,7 +586,7 @@ footer p {
 }
 
 .carousel-button:hover {
-    background-color: #3571e3; /* Цвет при наведении */
+    background-color: #4b8eff; /* Цвет при наведении */
 }
 
 .carousel-button.prev {
