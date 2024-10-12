@@ -79,7 +79,7 @@ p {
 }
 
 .main-nav ul li a:hover {
-    color: #4b8eff;
+    color: #2860f6;
 }
 
 .features-list {
@@ -102,7 +102,7 @@ p {
 /* Герой-секция */
 .hero {
     align-content: center;
-    background-image: url('17938277.jpg'); /* Укажите путь к вашему изображению */
+    background-image: url('3298672.jpg'); /* Укажите путь к вашему изображению */
     background-size: cover; /* Убедитесь, что изображение занимает всю секцию */
     background-position: center; /* Центрируем изображение */
     padding: 100px 20px;
@@ -195,7 +195,7 @@ p {
 .advantage-icon {
     font-size: 25px;
     color: #fff;
-    background-color: #4b8eff;
+    background-color: #2860f6;
     padding: 20px;
     border-radius: 50%;
     margin-bottom: 15px;
@@ -229,7 +229,7 @@ p {
 
 /* Кнопки */
 .btn-shadow {
-    background-color: #4b8eff;
+    background-color: #2860f6;
     color: #fff;
     padding: 15px 30px;
     border-radius: 8px;
@@ -546,7 +546,7 @@ footer p {
 }
 
 .price-footer .btn-shadow {
-    background-color: #4b8eff;
+    background-color: #2860f6;
     color: white;
     font-size: 1.2rem;
     padding: 15px 30px;
@@ -572,7 +572,7 @@ footer p {
     position: absolute;
     top: 50%; /* Центрируем по вертикали */
     transform: translateY(-50%);
-    background-color: #4b8eff; /* Цвет фона кнопки */
+    background-color: #2860f6; /* Цвет фона кнопки */
     color: #fff; /* Цвет текста */
     border: none; /* Без рамки */
     border-radius: 50%; /* Круглая форма */
@@ -584,7 +584,7 @@ footer p {
 }
 
 .carousel-button:hover {
-    background-color: #4b8eff; /* Цвет при наведении */
+    background-color: #2860f6; /* Цвет при наведении */
 }
 
 .carousel-button.prev {
