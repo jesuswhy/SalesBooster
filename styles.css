@@ -223,9 +223,7 @@ p {
         grid-template-columns: 1fr;
     }
 
-    .main-header {
-        display: none;
-    }
+
 }
 
 
