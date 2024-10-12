@@ -79,7 +79,7 @@ p {
 }
 
 .main-nav ul li a:hover {
-    color: #3DB9B5;
+    color: rgba(30, 255, 188, 1);
 }
 
 .features-list {
@@ -95,14 +95,14 @@ p {
 }
 
 .features-list li i {
-    color: #3EB489;
+    color: rgba(30, 255, 188, 1);
     margin-right: 10px;
 }
 
 /* Герой-секция */
 .hero {
     align-content: center;
-    background-image: url('3298672.jpg'); /* Укажите путь к вашему изображению */
+    background-image: url('https://html5book.ru/wp-content/uploads/2015/10/background54.png'); /* Укажите путь к вашему изображению */
     background-size: cover; /* Убедитесь, что изображение занимает всю секцию */
     background-position: center; /* Центрируем изображение */
     padding: 100px 20px;
@@ -195,7 +195,7 @@ p {
 .advantage-icon {
     font-size: 25px;
     color: #fff;
-    background-color: #3DB9B5;
+    background-color: rgba(30, 255, 188, 1);
     padding: 20px;
     border-radius: 50%;
     margin-bottom: 15px;
@@ -203,7 +203,7 @@ p {
 }
 
 .advantage-item:hover .advantage-icon {
-    background-color: #1d4185;
+    background-color: #FF50E5;
 }
 
 .advantage-content h3 {
@@ -229,59 +229,39 @@ p {
 
 /* Кнопки */
 .btn-shadow {
-    background-color: #3DB9B5;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 8px;
-    font-size: 1.2rem;
     text-decoration: none;
-    box-shadow: 0 2px 10px rgba(62, 180, 137, 0.3);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 15px 30px;
+  overflow: hidden;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(30, 255, 188, 1);
+  background: rgba(255, 255, 255, 1);
+  transition: color .3s, background .5s;
 }
 
 .btn-shadow:hover {
-    transform: translateY(-3px); /* Легкий подъем при наведении */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень при наведении */
-    background-color: #1e4a9a;
+    animation: stripes .75s infinite linear;
+    background: linear-gradient(45deg, rgba(30, 255, 188, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(30, 255, 188, 1) 50%, rgba(30, 255, 188, 1) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1));
+    background-size: 10px 10px;
+    color: #FF50E5;
 }
 
-/* Стили для секции "Как работает бот" */
-.how-it-works-section {
-    background-color: #fff;
-    padding: 80px 0;
-    text-align: center;
-}
+@keyframes stripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 0;
+    }
+  }
 
-.steps-container {
-    display: flex;
-    flex-direction: column; /* Изменяем на колонку для вертикального отображения */
-    align-items: center; /* Центрируем элементы по горизонтали */
-    gap: 40px; /* Отступ между шагами */
-    margin-top: 40px;
-}
 
-.step-item {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 10px;
-    width: 80%; /* Ограничение ширины для лучшего отображения */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.step-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-}
-
-.step-icon {
-    margin-bottom: 20px;
-}
-
-.step-icon img {
-    width: 50px; /* Задаем ширину для иконок */
-    height: 50px; /* Задаем высоту для иконок */
-}
 
 h3 {
     color: #000;
@@ -546,19 +526,27 @@ footer p {
 }
 
 .price-footer .btn-shadow {
-    background-color: #3DB9B5;
-    color: white;
-    font-size: 1.2rem;
-    padding: 15px 30px;
-    border-radius: 8px;
     text-decoration: none;
     display: inline-block;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 10px 20px;
+    padding: 15px 30px;
+    overflow: hidden;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgba(30, 255, 188, 1);
+    background: rgba(255, 255, 255, 1);
+    transition: color .3s, background .5s;
 }
 
 .price-footer .btn-shadow:hover {
-    background-color: #1c448f;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: stripes .75s infinite linear;
+  background: linear-gradient(45deg, rgba(30, 255, 188, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(30, 255, 188, 1) 50%, rgba(30, 255, 188, 1) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1));
+  background-size: 10px 10px;
+  color: #FF50E5;
 }
 
 
