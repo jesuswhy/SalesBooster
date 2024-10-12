@@ -8,7 +8,7 @@
 
 body {
     background-color: #ffffff;
-    color: #333333;
+    color: #333;
     overflow-x: hidden;
 }
 
@@ -19,19 +19,20 @@ body {
 }
 h2 {
     font-size: 2rem;
+    color: #222; /* Темный, но не черный цвет */
 }
 
 h1, h3 {
     font-weight: 700;
     margin-bottom: 20px;
-    color: #333;
+    color: #222; /* Темный, но не черный цвет */
     
 }
 
 p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #666666;
+    color: #555; /* Мягкий серый цвет */
 }
 
 
@@ -78,13 +79,32 @@ p {
 }
 
 .main-nav ul li a:hover {
+    color: #3571e3;
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.features-list li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.features-list li i {
     color: #3EB489;
+    margin-right: 10px;
 }
 
 /* Герой-секция */
 .hero {
     align-content: center;
-    background-image: linear-gradient(to right, #eff3f8, #dde9f7);
+    background-image: url('17938277.jpg'); /* Укажите путь к вашему изображению */
+    background-size: cover; /* Убедитесь, что изображение занимает всю секцию */
+    background-position: center; /* Центрируем изображение */
     padding: 100px 20px;
     text-align: center;
     display: flex;
@@ -112,34 +132,35 @@ p {
 .animated-title {
     font-size: 48px;
     font-weight: bold;
-    color: #131313;
-    animation: typing 2s steps(30), blink 0.5s step-end infinite;
+    color: #222;
+    animation: typing 1s steps(30), blink 0.75s step-end infinite;
     white-space: nowrap;
     overflow: hidden;
     text-align: center; /* Центрирование текста */
-    border-right: 3px solid;
-    width: 11.6ch; /* Ширина соответствующая длине текста */
+    border-right: 2px solid;
+    width: 7.6ch; /* Ширина соответствующая длине текста */
     margin: 0 auto; /* Центрирование самого элемента */
     padding: 0;
+    border-color: #333333;
 }
 
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 12ch; }
+    to { width: 7.6ch; }
 }
 
 @keyframes blink {
     from, to { border-color: transparent; }
-    50% { border-color: black; }
+    50% { border-color: #333333; }
 }
 
 
 /* Преимущества */
 .section {
-    padding: 80px 0;
+    padding: 100px 0;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #fafafa; /* Светлый фон для комфорта глаз */
 }
 
 /* Стили для секции преимуществ */
@@ -157,24 +178,24 @@ p {
 }
 
 .advantage-item {
-    background-color: #fff;
-    border-radius: 15px;
+    background-color: #ffffff;
+    border-radius: 12px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Более мягкие тени */
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out;
     position: relative;
 }
 
 .advantage-item:hover {
-    transform: translateY(-10px);
+    transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .advantage-icon {
     font-size: 25px;
     color: #fff;
-    background-color: #3EB489;
+    background-color: #3571e3;
     padding: 20px;
     border-radius: 50%;
     margin-bottom: 15px;
@@ -182,7 +203,7 @@ p {
 }
 
 .advantage-item:hover .advantage-icon {
-    background-color: #2f8666;
+    background-color: #1d4185;
 }
 
 .advantage-content h3 {
@@ -210,18 +231,20 @@ p {
 
 /* Кнопки */
 .btn-shadow {
-    background: #3EB489;
-    color: #ffffff;
+    background-color: #3571e3;
+    color: #fff;
     padding: 15px 30px;
     border-radius: 8px;
     font-size: 1.2rem;
     text-decoration: none;
+    box-shadow: 0 2px 10px rgba(62, 180, 137, 0.3);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .btn-shadow:hover {
     transform: translateY(-3px); /* Легкий подъем при наведении */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+    background-color: #1e4a9a;
 }
 
 /* Стили для секции "Как работает бот" */
@@ -302,9 +325,9 @@ p {
 
 .testimonial-item {
     background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     min-width: 300px;
     scroll-snap-align: center;
     flex-shrink: 0;
@@ -342,6 +365,7 @@ p {
 
 .testimonial-rating {
     font-size: 1.5rem;
+    margin-top: 15px;
     color: #ffc107;
 }
 
@@ -376,7 +400,6 @@ footer p {
 }
 
 /* Адаптивность */
-/* Адаптивность */
 @media (max-width: 768px) {
     .container {
         padding: 10px;
@@ -403,12 +426,11 @@ footer p {
     .logo {
         text-align: center; /* Логотип по центру на мобильных */
         width: 100%;
+        font-size: 1.8rem;
     }
 
     .main-nav ul {
         display: none; /* Изменяем это на flex */
-        flex-direction: column;
-        align-items: center;
     }
 }
 
@@ -482,7 +504,7 @@ footer p {
     background-color: #ffffff;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     max-width: 400px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
@@ -521,83 +543,12 @@ footer p {
     text-align: left;
 }
 
-.features-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.features-list li {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.features-list li i {
-    color: #3EB489;
-    margin-right: 10px;
-}
-
-/* Основные стили секции возможностей */
-.features-section {
-    padding: 60px 20px;
-    background-color: #fff; /* Белый фон для минималистичного стиля */
-    border-radius: 12px; /* Сглаженные углы для современного вида */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Легкая тень для глубины */
-  }
-  
-  .section-title {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #333; /* Темный цвет для заголовка */
-    font-weight: 600; /* Четкий и жирный шрифт для заголовка */
-  }
-  
-  .feature {
-    margin-bottom: 30px;
-    padding: 20px;
-    border-bottom: 1px solid #eaeaea; /* Линия между функциями */
-  }
-  
-  .feature-title {
-    font-size: 24px;
-    color: #111; /* Темно-серый цвет */
-    margin-bottom: 10px;
-  }
-  
-  .feature-description {
-    font-size: 16px;
-    color: #555; /* Серый цвет текста для более современного ощущения */
-    line-height: 1.6;
-  }
-  
-  /* Мобильная адаптация */
-  @media (max-width: 768px) {
-    .features-section {
-      padding: 40px 10px;
-    }
-  
-    .section-title {
-      font-size: 28px;
-    }
-  
-    .feature-title {
-      font-size: 22px;
-    }
-  
-    .feature-description {
-      font-size: 15px;
-    }
-  }
-  
-
 .price-footer {
     margin-top: 20px;
 }
 
 .price-footer .btn-shadow {
-    background-color: #3EB489;
+    background-color: #3571e3;
     color: white;
     font-size: 1.2rem;
     padding: 15px 30px;
@@ -608,7 +559,7 @@ footer p {
 }
 
 .price-footer .btn-shadow:hover {
-    background-color: #2a7c64;
+    background-color: #1c448f;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -623,7 +574,7 @@ footer p {
     position: absolute;
     top: 50%; /* Центрируем по вертикали */
     transform: translateY(-50%);
-    background-color: #FFA781; /* Цвет фона кнопки */
+    background-color: #3571e3; /* Цвет фона кнопки */
     color: #fff; /* Цвет текста */
     border: none; /* Без рамки */
     border-radius: 50%; /* Круглая форма */
@@ -635,7 +586,7 @@ footer p {
 }
 
 .carousel-button:hover {
-    background-color: #3EB489; /* Цвет при наведении */
+    background-color: #3571e3; /* Цвет при наведении */
 }
 
 .carousel-button.prev {
@@ -645,3 +596,4 @@ footer p {
 .carousel-button.next {
     right: 10px; /* Расстояние от правой стороны */
 }
+
