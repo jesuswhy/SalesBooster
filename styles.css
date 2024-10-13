@@ -130,24 +130,14 @@ p {
 }
 
 .animated-title {
-    font-size: 48px;
-    font-weight: bold;
-    color: #222;
-    animation: typing 1s steps(30), blink 0.75s step-end infinite;
+    font-size: 1.4rem;
+    color: #333;
     white-space: nowrap;
     overflow: hidden;
-    text-align: center; /* Центрирование текста */
-    border-right: 2px solid;
-    width: 7.6ch; /* Ширина соответствующая длине текста */
-    margin: 0 auto; /* Центрирование самого элемента */
-    padding: 0;
-    border-color: #333333;
-}
-
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 7.6ch; }
+    width: 22ch; /* Фиксированная ширина */
+    min-height: 1.4rem;
+    margin: 0 auto;
+    text-align: center;
 }
 
 @keyframes blink {
@@ -357,20 +347,39 @@ footer {
     text-align: center;
 }
 
+footer .social-icons {
+    display: flex; /* Включаем flexbox для выравнивания */
+    justify-content: center; /* Центрируем иконки по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    gap: 20px; /* Увеличим расстояние между иконками */
+}
+
 footer .social-icons a {
-    margin: 0 10px;
+    margin: 0; /* Убираем внешние отступы, так как используется gap */
     text-decoration: none;
+    font-size: 30px;
+    display: flex; /* Flex для правильного выравнивания содержимого */
+    justify-content: center; /* Центрирование содержимого */
+    align-items: center; /* Центрирование содержимого */
+    width: 60px; /* Увеличиваем размер контейнера иконки */
+    height: 60px; /* Увеличиваем размер контейнера иконки */
+    background-color: rgba(30, 255, 188, 1); /* Акцентный цвет */
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    background-color: #FF50E5; /* Изменение цвета при наведении */
+    transform: scale(1.1); /* Легкое увеличение при наведении */
 }
 
 footer .social-icons a img {
-    width: 32px;
-    height: 32px;
-    transition: transform 0.3s ease;
+    width: 30px; /* Размер иконки внутри */
+    height: 30px;
+    filter: brightness(0) invert(1); /* Сделаем иконки белыми */
+    transition: filter 0.3s ease; /* Плавная анимация для иконок */
 }
 
-footer .social-icons a:hover img {
-    transform: scale(1.2);
-}
 
 footer p {
     margin-top: 20px;
@@ -549,49 +558,3 @@ footer p {
   color: #FF50E5;
 }
 
-
-
-/* Стили для кнопок переключения */
-.testimonials-carousel {
-    position: relative; /* Добавляем позиционирование для кнопок */
-}
-
-.carousel-button {
-    position: absolute;
-    top: 50%; /* Центрируем по вертикали */
-    transform: translateY(-50%);
-    background-color: #3DB9B5; /* Цвет фона кнопки */
-    color: #fff; /* Цвет текста */
-    border: none; /* Без рамки */
-    border-radius: 50%; /* Круглая форма */
-    padding: 10px 15px; /* Внутренние отступы */
-    cursor: pointer; /* Курсор в виде руки */
-    font-size: 1.5rem; /* Размер шрифта */
-    transition: background 0.3s ease; /* Плавный переход для фона */
-    z-index: 10; /* Выше других элементов */
-}
-
-.carousel-button:hover {
-    background-color: #3DB9B5; /* Цвет при наведении */
-}
-
-.carousel-button.prev {
-    left: 10px; /* Расстояние от левой стороны */
-}
-
-.carousel-button.next {
-    right: 10px; /* Расстояние от правой стороны */
-}
-
-.mockup-section {
-    padding: 100px 0; /* Отступы */
-    text-align: center; /* Центрируем текст */
-    background-color: #f9f9f9; /* Светлый фон */
-}
-
-.mockup-image {
-    max-width: 100%; /* Максимальная ширина 100% */
-    height: auto; /* Автоматическая высота для поддержания пропорций */
-    border-radius: 12px; /* Закругленные углы */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для изображения */
-}
