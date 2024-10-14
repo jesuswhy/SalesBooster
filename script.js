@@ -56,4 +56,10 @@ function type() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", type);
+
+document.addEventListener("DOMContentLoaded", function() {
+    AOS.init({
+        duration: 800, // Длительность анимации
+        once: true // Анимация срабатывает один раз
+    });
+});
