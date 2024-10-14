@@ -613,7 +613,7 @@ footer p {
 
 .case-item h3 {
     font-size: 1.8em;
-    color: #FF50E5;
+    color: rgba(30, 255, 188, 1);
     margin-bottom: 15px;
 }
 
@@ -711,7 +711,7 @@ footer p {
 .step-icon {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #FF50E5;
+    color: rgba(30, 255, 188, 1);
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
 }
 
